@@ -1,0 +1,31 @@
+{
+  "name": "postcss-deep-scopable",
+  "version": "0.0.1",
+  "description": "unified deep style scoped postcss plugin for vue",
+  "config": {
+    "libName": "deep-scopable"
+  },
+  "keywords": [
+    "deep-scopable",
+    "vue"
+  ],
+  "author": "litt1e-p",
+  "license": "MIT",
+  "main": "dist/deep-scopable.umd.js",
+  "module": "dist/deep-scopable.esm.js",
+  "unpkg": "dist/deep-scopable.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litt1e-p/postcss-deep-scopable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/litt1e-p/postcss-deep-scopable/issues"
+  },
+  "homepage": "https://github.com/litt1e-p/postcss-deep-scopable#readme",
+  "dependencies": {
+    "postcss": "^7.0.32"
+  },
+  "peerDependencies": {
+    "vue": ">= 2.6.11 < 3"
+  }
+}
