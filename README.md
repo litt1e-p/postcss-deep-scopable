@@ -24,6 +24,23 @@ const postcss = require('postcss');
 const postcssDeepScopable = require('postcss-deep-scopable');
 
 postcss([ postcssDeepScopable() ]).process(myCss).css
+
+// or add a custom deep css selector or selectors
+postcss([ postcssDeepScopable('&deep&') ]).process(myCss).css
+postcss([ postcssDeepScopable(['&deep&', '%deep%']) ]).process(myCss).css
+
+// input css/scss/less...
+&deep& .app, %deep% .main {
+  text-align: center;
+  color: red;
+}
+
+// output css
+
+::v-deep .app, ::v-deep .main {
+  text-align: center;
+  color: red;
+}
 ```
 
 # License
