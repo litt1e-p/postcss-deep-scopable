@@ -1,1 +1,0 @@
-import e from"postcss";var s=/\/deep\//g,t=/\>\>\>/g,r=/\>\s\>\s\>\s/g,c="::v-deep ",o=e.plugin("postcss-deep-scopable",(function(){return function(e){e.walkRules((function(e){var o=e.selector;s.test(e.selector)?o=e.selector.replace(s,c):t.test(e.selector)?o=e.selector.replace(t,c):r.test(e.selector)&&(o=e.selector.replace(r,c)),e.selector=o}))}}));export{o as DeepScopable};

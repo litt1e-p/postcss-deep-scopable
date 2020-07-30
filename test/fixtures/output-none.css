@@ -1,0 +1,23 @@
+::v-deep .some-background {
+  background: url(image.png) no-repeat #ff0;
+}
+
+::v-deep .some-font {
+  font: 16px / 1.2 sans-serif;
+}
+
+::v-deep .unhandled-shorthand {
+  list-style: none;
+}
+
+::v-deep  .some-background {
+  background: url(image.png) no-repeat #ff0;
+}
+
+::v-deep  .some-font {
+  font: 16px / 1.2 sans-serif;
+}
+
+::v-deep .unhandled-shorthand {
+  list-style: none;
+}

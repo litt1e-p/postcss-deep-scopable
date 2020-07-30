@@ -1,0 +1,31 @@
+/deep/.some-background {
+  background: url(image.png) no-repeat #ff0;
+}
+
+>>>.some-font {
+  font: 16px / 1.2 sans-serif;
+}
+
+>  >  >.unhandled-shorthand {
+  list-style: none;
+}
+
+/deep/ .some-background {
+  background: url(image.png) no-repeat #ff0;
+}
+
+>>> .some-font {
+  font: 16px / 1.2 sans-serif;
+}
+
+>  >  > .unhandled-shorthand {
+  list-style: none;
+}
+
+&&#custom-sel, %%.desc {
+  color: red;
+}
+
+&& #custom-sel2 %% .desc2 {
+  color: blue;
+}
