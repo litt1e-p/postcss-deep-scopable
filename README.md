@@ -29,12 +29,42 @@ postcss([ postcssDeepScopable() ]).process(myCss).css
 postcss([ postcssDeepScopable('&deep&') ]).process(myCss).css
 postcss([ postcssDeepScopable(['&deep&', '%deep%']) ]).process(myCss).css
 
-// input css/scss/less...
+```
+
+input example
+```css
+// scss/less...
+<style lang="less" scoped>
+/dee/ .app {
+  text-align: center;
+}
+</style>
+<style lang="scss" scoped>
+>>> .main {
+  color: red;
+}
+</style>
+```
+output example
+```js
+::v-deep .app {
+  text-align: center;
+}
+::v-deep .main {
+  color: red;
+}
+```
+
+input example: custom selectors
+```js
+// input scss/less...
 &deep& .app, %deep% .main {
   text-align: center;
   color: red;
 }
-
+```
+output example
+```js
 // output css
 
 ::v-deep .app, ::v-deep .main {

@@ -7,6 +7,7 @@
   },
   "keywords": [
     "postcss-deep-scopable",
+    "postcss-plugin",
     "v-deep",
     "/deep/",
     ">>>",
