@@ -4,12 +4,12 @@
 
 unified deep scoped style postcss plugin for vue
 
-Note: This currently only supports a limited list of scoped css [selectors](https://vue-loader.vuejs.org/guide/scoped-css.html)
+Note: This is not only supports a limited list of scoped less/sass|scss [selectors](https://vue-loader.vuejs.org/guide/scoped-css.html) but also supports custom selectors.
 
 - /deep/
 - `>>>`
 - `> > >`
-- also your custom deep selectors
+- your custom deep selectors
 
 # Installation
 
