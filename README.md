@@ -26,39 +26,15 @@ const postcssDeepScopable = require('postcss-deep-scopable');
 postcss([ postcssDeepScopable() ]).process(myCss).css
 
 // or add a custom deep css selector or selectors
-postcss([ postcssDeepScopable('&deep&') ]).process(myCss).css
-postcss([ postcssDeepScopable(['&deep&', '%deep%']) ]).process(myCss).css
+postcss([ postcssDeepScopable('&scoped&') ]).process(myCss).css
+postcss([ postcssDeepScopable(['&scoped&', '%reveal%']) ]).process(myCss).css
 
-```
-
-input example
-```css
-// scss/less...
-<style lang="less" scoped>
-/dee/ .app {
-  text-align: center;
-}
-</style>
-<style lang="scss" scoped>
->>> .main {
-  color: red;
-}
-</style>
-```
-output example
-```js
-::v-deep .app {
-  text-align: center;
-}
-::v-deep .main {
-  color: red;
-}
 ```
 
 input example: custom selectors
 ```js
 // input scss/less...
-&deep& .app, %deep% .main {
+&scoped& .app, %reveal% .main {
   text-align: center;
   color: red;
 }

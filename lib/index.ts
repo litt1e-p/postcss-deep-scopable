@@ -1,18 +1,20 @@
 const postcss = require('postcss');
-const dp_reg = /\/deep\//g;
-const dp_reg1 = />>>/g
-const dp_reg2 = />\s{0,}>\s{0,}>\s{0,}/g
-const rp = '::v-deep '
+const dp_reg: RegExp = /\/deep\//g;
+const dp_reg1: RegExp = />>>/g
+const dp_reg2: RegExp = />\s{0,}>\s{0,}>\s{0,}/g
+const rp: string = '::v-deep '
 
-function escapeRegExp(string) {
-  return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+type ExecNever = Array<string> | never
+
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
 }
 
-function replaceAll(str, find, replace) {
+function replaceAll(str: string, find: string, replace: string): string {
   return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
 }
 
-function exec (s, v, p) {
+function exec (s: string, v: Array<string>, p: string): ExecNever {
   if (Object.prototype.toString.call(v) === '[object String]') {
     return replaceAll.apply(v, arguments);
   } else if (Object.prototype.toString.call(v) === '[object Array]') {
@@ -25,7 +27,7 @@ function exec (s, v, p) {
 module.exports = postcss.plugin('postcss-deep-scopable', (options) => {
   return root => {
     root.walkRules(function(rule) {
-      var temp = rule.selector;
+      var temp: string = rule.selector;
       if (dp_reg.test(rule.selector)) {
         temp = rule.selector.replace(dp_reg, rp);
       } else if (dp_reg1.test(rule.selector)) {
