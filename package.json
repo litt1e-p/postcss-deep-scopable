@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/litt1e-p/postcss-deep-scopable#readme",
   "dependencies": {
-    "postcss": "^7.0.32"
+    "postcss": "^8.2.10"
   },
   "peerDependencies": {
     "vue": ">= 2.6.11 < 3"
