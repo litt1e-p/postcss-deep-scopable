@@ -1,6 +1,6 @@
 {
   "name": "postcss-deep-scopable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "unified deep style scoped postcss plugin for vue",
   "config": {
     "libName": "postcss-deep-scopable"
